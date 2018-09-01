@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"sync/atomic"
 	"time"
 
 	bsmsg "github.com/ipfs/go-bitswap/message"
@@ -47,6 +48,8 @@ type impl struct {
 
 	// inbound messages from the network are forwarded to the receiver
 	receiver Receiver
+
+	stats NetworkStats
 }
 
 type streamMessageSender struct {
@@ -123,6 +126,8 @@ func (bsnet *impl) SendMessage(
 		s.Reset()
 		return err
 	}
+	atomic.AddUint64(&bsnet.stats.MessagesSent, 1)
+
 	// TODO(https://github.com/libp2p/go-libp2p-net/issues/28): Avoid this goroutine.
 	go inet.AwaitEOF(s)
 	return s.Close()
@@ -203,11 +208,19 @@ func (bsnet *impl) handleNewStream(s inet.Stream) {
 		ctx := context.Background()
 		log.Debugf("bitswap net handleNewStream from %s", s.Conn().RemotePeer())
 		bsnet.receiver.ReceiveMessage(ctx, p, received)
+		atomic.AddUint64(&bsnet.stats.MessagesRecvd, 1)
 	}
 }
 
 func (bsnet *impl) ConnectionManager() ifconnmgr.ConnManager {
 	return bsnet.host.ConnManager()
+}
+
+func (bsnet *impl) Stats() NetworkStats {
+	return NetworkStats{
+		MessagesRecvd: atomic.LoadUint64(&bsnet.stats.MessagesRecvd),
+		MessagesSent:  atomic.LoadUint64(&bsnet.stats.MessagesSent),
+	}
 }
 
 type netNotifiee impl
