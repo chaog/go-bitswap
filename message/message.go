@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"io"
 
-	pb "github.com/ipfs/go-bitswap/message/pb"
-	wantlist "github.com/ipfs/go-bitswap/wantlist"
-	blocks "github.com/ipfs/go-block-format"
+	blocks "gx/ipfs/QmRcHuYzAyswytBuMF78rj3LTChYszomRFXNg4685ZN1WM/go-block-format"
+	pb "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/message/pb"
+	wantlist "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/wantlist"
 
-	ggio "github.com/gogo/protobuf/io"
-	cid "github.com/ipfs/go-cid"
-	inet "github.com/libp2p/go-libp2p-net"
+	cid "gx/ipfs/QmPSQnBKM9g7BaUcZCvswUJVscQ1ipjmwxN5PXCjkp9EQ7/go-cid"
+	inet "gx/ipfs/QmZNJyx9GGCX4GeuHnLB8fxaxMLs4MjTjHokxfQcCd6Nve/go-libp2p-net"
+	ggio "gx/ipfs/QmdxUuburamoF6zF9qjeQC4WYcWGbWuRmdLacMEsW8ioD8/gogo-protobuf/io"
 )
 
 // TODO move message.go into the bitswap package

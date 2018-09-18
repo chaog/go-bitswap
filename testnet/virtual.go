@@ -6,17 +6,17 @@ import (
 	"sync"
 	"time"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	bsnet "github.com/ipfs/go-bitswap/network"
+	bsmsg "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/message"
+	bsnet "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/network"
 
-	cid "github.com/ipfs/go-cid"
-	delay "github.com/ipfs/go-ipfs-delay"
-	mockrouting "github.com/ipfs/go-ipfs-routing/mock"
-	logging "github.com/ipfs/go-log"
-	ifconnmgr "github.com/libp2p/go-libp2p-interface-connmgr"
-	peer "github.com/libp2p/go-libp2p-peer"
-	routing "github.com/libp2p/go-libp2p-routing"
-	testutil "github.com/libp2p/go-testutil"
+	cid "gx/ipfs/QmPSQnBKM9g7BaUcZCvswUJVscQ1ipjmwxN5PXCjkp9EQ7/go-cid"
+	peer "gx/ipfs/QmQsErDt8Qgw1XrsXf2BpEzDgGWtB1YLsTAARBup5b6B9W/go-libp2p-peer"
+	delay "gx/ipfs/QmRJVNatYJwTAHgdSM1Xef9QVQ1Ch3XHdmcrykjP5Y4soL/go-ipfs-delay"
+	testutil "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil"
+	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"
+	mockrouting "gx/ipfs/QmSNe4MWVxZWk6UxxW2z2EKofFo4GdFzud1vfn1iVby3mj/go-ipfs-routing/mock"
+	ifconnmgr "gx/ipfs/QmWGGN1nysi1qgqto31bENwESkmZBY4YGK4sZC3qhnqhSv/go-libp2p-interface-connmgr"
+	routing "gx/ipfs/QmdKS5YtmuSWKuLLgbHG176mS3VX3AKiyVmaaiAfvgcuch/go-libp2p-routing"
 )
 
 var log = logging.Logger("bstestnet")
