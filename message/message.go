@@ -5,8 +5,10 @@ import (
 	"io"
 
 	blocks "gx/ipfs/QmRcHuYzAyswytBuMF78rj3LTChYszomRFXNg4685ZN1WM/go-block-format"
-	pb "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/message/pb"
-	wantlist "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/wantlist"
+
+	wantlist "github.com/ipfs/go-bitswap/wantlist"
+
+	pb "github.com/ipfs/go-bitswap/message/pb"
 
 	cid "gx/ipfs/QmPSQnBKM9g7BaUcZCvswUJVscQ1ipjmwxN5PXCjkp9EQ7/go-cid"
 	inet "gx/ipfs/QmZNJyx9GGCX4GeuHnLB8fxaxMLs4MjTjHokxfQcCd6Nve/go-libp2p-net"

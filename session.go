@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	notifications "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/notifications"
+	notifications "github.com/ipfs/go-bitswap/notifications"
 
 	cid "gx/ipfs/QmPSQnBKM9g7BaUcZCvswUJVscQ1ipjmwxN5PXCjkp9EQ7/go-cid"
 	lru "gx/ipfs/QmQjMHF8ptRgx4E57UFMiT4YM6kqaJeYxZ1MCDX23aw4rK/golang-lru"

@@ -5,8 +5,9 @@ import (
 	"sync"
 	"testing"
 
-	bsmsg "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/message"
-	bsnet "gx/ipfs/QmUyaGN3WPr3CTLai7DBvMikagK45V4fUi8p8cNRaJQoU1/go-bitswap/network"
+	bsnet "github.com/ipfs/go-bitswap/network"
+
+	bsmsg "github.com/ipfs/go-bitswap/message"
 
 	peer "gx/ipfs/QmQsErDt8Qgw1XrsXf2BpEzDgGWtB1YLsTAARBup5b6B9W/go-libp2p-peer"
 	delay "gx/ipfs/QmRJVNatYJwTAHgdSM1Xef9QVQ1Ch3XHdmcrykjP5Y4soL/go-ipfs-delay"
